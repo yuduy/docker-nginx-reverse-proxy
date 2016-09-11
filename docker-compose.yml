@@ -1,0 +1,9 @@
+sonarqube:
+  image: nginx:latest
+  container_name: nginx_rproxy
+  restart: always
+  ports:
+  - '10443:443'
+  volumes:
+  - ./ssl:/etc/nginx/ssl:ro
+  - ./nginx.conf:/etc/nginx/nginx.conf:ro

@@ -1,0 +1,36 @@
+
+Reverse Proxy Docker Container
+==============================
+
+Overview
+--------
+
+       Web browser
+            |
+  https://192.168.33.20:10443/
+            |
+            V  port:443
+      +------------+
+      |    Nginx   |
+      +------------+
+            |
+  http://192.168.33.21:8080/
+            |
+            V
+    Application Server
+
+
+Files
+-----
+
+- README
+- docker-compose.yml
+- nginx.conf
+- ssl/
+  - server.key 
+  - server.crt
+
+Usage
+-----
+
+sudo docker-compose up -d
