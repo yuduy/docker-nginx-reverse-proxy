@@ -1,4 +1,4 @@
-sonarqube:
+nginx:
   image: nginx:latest
   container_name: nginx_rproxy
   restart: always
